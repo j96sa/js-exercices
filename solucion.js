@@ -1,5 +1,5 @@
-/*******************************************************************************************  SUMAR max-min */
-// 1 -- crear una funcion que se le pasen como parametros dos arreglos y que devuelva la suma del menor y el mayor numero de cada array
+/* SUMAR max-min */
+// 30 -- crear una funcion que se le pasen como parametros dos arreglos y que devuelva la suma del menor y el mayor numero de cada array
 
 /* const arr1 = [20,56,80,100],
 arr2 = [1,1,1,2,10]; */
@@ -15,8 +15,10 @@ arr2 = [1,1,1,2,10]; */
 }   
 maxmin(arr1); */
 
+
+//MI SOLUCION
 //OPCION-1
-/* const sumar = (max,min)=>{  
+/* const sumar = (min,max)=>{  
     let result = Math.min(...min) + Math.max(...max);
     return console.log(result);
 };
@@ -27,7 +29,7 @@ sumar(arr1,arr2); */
 /* let max = Math.max(...arr1);
 let min = Math.min(...arr2);
 
-const sumar = (max,min)=>{
+const sumar = (min,max)=>{
     let result = max + min;
     return console.log(result);
 }
@@ -42,7 +44,7 @@ sumar(max,min); */
 
 
 /*(Free Code Camp) SUMAR NUMEROS EN UN ARRAY  */
-// 2 -- Le pasaremos una matriz de dos números. Devuelve la suma de esos dos números más la suma de todos los números entre ellos. El número más bajo no siempre vendrá primero.
+// 31 -- Le pasaremos una matriz de dos números. Devuelve la suma de esos dos números más la suma de todos los números entre ellos. El número más bajo no siempre vendrá primero.
 
 //sumAll([1, 4]) debe devolver 10.
 //sumAll([4, 1]) debe devolver 10.
@@ -76,22 +78,23 @@ sumAll([10,5]); */
 
 
 /*(Free Code Camp) COMPARAR MATRICES */
-//Compare dos matrices y devuelva una nueva matriz con cualquier elemento que solo se encuentre en una de las dos matrices dadas, pero no en ambas. En otras palabras, devuelva la diferencia simétrica de las dos matrices.
+// 32 - Compare dos matrices y devuelva una nueva matriz con cualquier elemento que solo se encuentre en una de las dos matrices dadas, pero no en ambas. En otras palabras, devuelva la diferencia simétrica de las dos matrices.
 //Nota: puede devolver la matriz con sus elementos en cualquier orden.
 
-const arr1 = [1,2,3],
-arr2 = [1,2,3,88];
-
-
-const compareArr = (a,b)=>{
+/* const compareArr = (arr1,arr2)=>{
     const newArr = [];
 
-    a.forEach(element => {
-        b.map(e=>e===element ?false :newArr.push(element))   
+    arr1.forEach(element => {
+        arr2.find(e=>e===element) ?false :newArr.push(element);
     });
-    
+
+    arr2.forEach(element => {
+        arr1.find(e=>e===element) ?false :newArr.push(element);
+    });
+
+    return newArr;
 };
 
-compareArr(arr1,arr2)
+console.log(compareArr([1,2,3,55],[0,1,2,3,22])); */
 
 

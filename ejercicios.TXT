@@ -1,0 +1,241 @@
+1 - Programa una función que cuente el número de caracteres de una cadena de texto.
+
+funcion("Hola Mundo");
+ Debe devolver => 10
+
+
+
+
+2 - Programa una función que te devuelva el texto recortado según el número de caracteres indicados.
+
+funcion("Hola Mundo", 4);
+ Debe devolver => "Hola"
+
+
+
+
+3 - Programa una función que dada una String te devuelva un Array de textos separados por cierto caracter.
+
+funcion('hola que tal', ' ') 
+ Debe devolver => ['hola', 'que', 'tal'].
+
+
+
+
+4 - Programa una función que repita un texto X veces.
+
+funcion('Hola Mundo', 3)
+ Debe devolver => "Hola Mundo" "Hola Mundo" "Hola Mundo".
+
+
+
+5 - Programa una función que invierta las palabras de una cadena de texto.
+
+funcion("Hola Mundo")
+ Debe devolver => "odnuM aloH".
+
+
+
+
+6 - Programa una función para contar el número de veces que se repite una palabra en un texto largo.
+
+funcion("hola mundo adios mundo", "mundo");
+ Debe devolver => 2.
+
+
+
+7-Programa una función que valide si una palabra o frase dada, es un palíndromo (que se lee igual en un sentido que en otro).
+
+funcion("Salas");
+ Debe devolver => true;
+
+
+
+
+8-Programa una función que elimine cierto patrón de caracteres de un texto dado.
+
+funcion("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz");
+ Debe devolver => "1, 2, 3, 4 y 5"
+
+
+
+
+9-Programa una función que obtenga un numero aleatorio entre 501 y 600.
+
+
+
+
+10-Programa una función que reciba un número y evalúe si es capicúa o no (que se lee igual en un sentido que en otro).
+
+funcion(2002);
+ Debe devolver => true.
+
+
+
+11-Programa una función que calcule el factorial de un número (El factorial de un entero positivo n, se define como el producto de todos los números enteros positivos desde 1 hasta n);
+
+funcion(5);
+ Debe devolver => 120;
+
+
+
+12-Programa una función que determine si un número es primo (aquel que solo es divisible por sí mismo y 1) o no;
+
+funcion(7);
+ Debe devolver => true
+
+
+
+13-Programa una función que determine si un número es par o impar.
+
+funcion(29);
+ Debe devolver => Impar
+
+
+
+14-Programa una función para convertir grados Celsius a Fahrenheit y viceversa.
+
+funcion(0,"C");
+ Debe devolver 32°F
+
+
+
+
+15-Programa una función para convertir números de base binaria a decimal y viceversa.
+
+funcion(100,2);
+ Debe devolver 4 base 10.
+
+
+
+
+16-Programa una función que devuelva el monto final después de aplicar un descuento a una cantidad dada.
+
+funcion(1000, 20);
+ Debe devolver 800
+
+
+
+17-Programa una función que dada una fecha válida determine cuantos años han pasado hasta el día de hoy;
+
+funcion(new Date(1984,4,23));
+ Debe devolver => 35 años (en 2020)
+
+
+
+
+18-Programa una función que dada una cadena de texto cuente el número de vocales y consonantes;
+ 
+funcion("Hola Mundo");
+ Debe devolver => Vocales: 4, Consonantes: 5
+
+
+
+
+19-Programa una founcion que valide que un texto sea un nombre valido;
+
+funcion("Josue Paulo");
+ Debe devolver => verdadero
+
+
+
+20-Programa una función que valide que un texto sea un email válido;
+
+funcion("jonmircha@gmail.com");
+ Debe devolver => vedadero
+
+
+
+
+21-Programa una función que dado un array numérico devuelve otro array con los números elevados al cuadrado;
+
+funcion([1, 4, 5]);
+ Debe devolver => [1, 16, 25]
+
+
+
+
+22-Programa una función que dado un array devuelva el número mas alto y el más bajo de dicho array;
+
+funcion([1, 4, 5, 99, -60]);
+ Debe devolver => [99, -60]
+
+
+
+23-Programa una función que dado un array de números devuelva un objeto con 2 arreglos en el primero almacena los números pares y en el segundo los impares.
+
+funcion([1,2,3,4,5,6,7,8,9,0]);
+ Debe devolver => {pares: [2,4,6,8,0], impares: [1,3,5,7,9]}
+
+
+
+
+24-Programa una función que dado un arreglo de números devuelva un objeto con dos arreglos, el primero tendrá los numeros ordenados en forma ascendente y el segundo de forma descendiente;
+
+funcion([7, 5,7,8,6]);
+  Debe devolver => { asc: [5,6,7,7,8], desc: [8,7,7,6,5] }
+
+
+
+
+25-Programa una función que dado un arreglo de elementos, elimine los duplicados;
+
+funcion(["x", 10, "x", 2, "10", 10, true, true]);
+ Debe devolver => ["x", 10, 2, "10", true];
+
+
+
+
+26-Programa una función que dado un arreglo de números obtenga el promedio;
+
+funcion([9,8,7,6,5,4,3,2,1,0]);
+ Debe devolver => 4.5.
+
+
+
+
+27-dado un texto transforma todas sus letras a mayuscula;
+
+
+
+
+29-dado un texto transforma la primera letra de cada palabra a mayuscula
+
+
+
+
+
+30 - Crear una funcion que se le pasen como parametros dos arreglos y que devuelva la suma del menor y el mayor numero de cada array
+
+const min = [1,1,1,2,10]; 
+const max = [20,56,80,100];
+
+funcion(min,max);
+ Debe devolver => 30;
+
+
+
+
+31** - Le pasaremos una matriz de dos números. Devuelve la suma de esos dos números más la suma de todos los números entre ellos. El número más bajo no siempre vendrá primero.
+
+funcion([1, 4])
+ Debe devolver => 10;
+
+funcion([10, 5])
+ Debe devolver => 45;
+
+
+
+
+32** - Compare dos matrices y devuelva una nueva matriz con cualquier elemento que solo se encuentre en una de las dos matrices dadas, pero no en ambas. En otras palabras, devuelva la diferencia simétrica de las dos matrices.Puede devolver la matriz con sus elementos en cualquier orden.
+
+funcion([1,2,3,55],[0,1,2,3,22])
+ Debe devolver => [0,22,55]
+
+funcion([1,"hi",88],[10,1,"world",23,"hi"])
+ Debe devolver => [88,10,world,23]
+
+
+
+
+
