@@ -29,7 +29,7 @@ funcion('Hola Mundo', 3)
 
 
 
-5 - Programa una función que invierta las palabras de una cadena de texto.
+5 - Programa una función que invierta las letras de una cadena de texto.
 
 funcion("Hola Mundo")
  Debe devolver => "odnuM aloH".
@@ -234,6 +234,21 @@ funcion([1,2,3,55],[0,1,2,3,22])
 
 funcion([1,"hi",88],[10,1,"world",23,"hi"])
  Debe devolver => [88,10,world,23]
+
+
+
+
+33** - Se le proporcionará una matriz inicial (el primer argumento de la destroyerfunción), seguida de uno o más argumentos. Elimina todos los elementos de la matriz inicial que tengan el mismo valor que estos argumentos.
+Nota: Tienes que usar el arguments objeto.
+
+funcion([1, 2, 3, 1, 2, 3], 2, 3)
+ Debe devolver => [1, 1]
+
+funcion([1, 2, 3, 5, 1, 2, 3], 2, 3)
+ Debe devolver => [1, 5, 1]
+
+
+
 
 
 

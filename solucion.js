@@ -1,3 +1,126 @@
+// 1 - Programa una función que cuente el número de caracteres de una cadena de texto.
+/* const count = (text)=>{
+    //opcion 1
+    const numberOfCaracters = text.length;
+    console.log(numberOfCaracters);
+    return numberOfCaracters;
+
+    //opcion 2 : sin usar el length
+    const arr = Array.from(text);
+    let numberOfCaracters = 0;
+
+    for (let i = 0; i < arr.length; i++) {
+        numberOfCaracters++;
+    }
+
+    console.log(numberOfCaracters);
+    return numberOfCaracters;
+};
+
+count("hola mundo"); */
+
+
+
+
+
+
+
+
+
+// 2 - Programa una función que te devuelva el texto recortado según el número de caracteres indicados.
+/* const cutText = (text,index)=>{
+    //opcion 1
+    const newText = text.substring(0,index);
+    console.log(newText);
+    return newText;
+
+    //opcion 2
+    const newText = text.slice(0,index);
+    console.log(newText);
+    return newText;
+};
+
+cutText("Hola Mundo",4); */
+
+
+
+
+
+
+
+
+
+// 3 - Programa una función que dada una String te devuelva un Array de textos separados por cierto caracter.
+/* const splitText = (text,val)=>{
+    const newText = text.split(val)
+    console.log(newText);
+    return newText;
+}
+
+splitText("hola que tal"," "); */
+
+
+
+
+
+
+
+
+
+// 4 - Programa una función que repita un texto X veces.
+/* const repeatText = (text,interval)=>{
+    let count = text.repeat(interval);
+    console.log(count);
+};
+repeatText("hola mundo ",3); */
+
+
+
+
+
+
+
+
+
+// 5 - Programa una función que invierta las letras de una cadena de texto.
+/* const invert = (text)=>{
+    const textInverted = text.split("").reverse().join("");
+    console.log(textInverted);
+    return textInverted;
+};
+invert("hola mundo"); */
+
+
+
+
+
+
+
+
+
+// 6 - Programa una función para contar el número de veces que se repite una palabra en un texto largo.
+const wordCounter = (text,search)=>{
+    const textArr = text.split(" ");
+
+    let iterator = 0;
+    let index = textArr.indexOf(search);
+    
+    while(index !== -1) {        
+        iterator++;
+        index = textArr.indexOf(search,index + 1);
+    }
+
+    console.log(iterator);
+};
+wordCounter("que hola tal estas hola man hola","hola");
+
+
+
+
+
+
+
+
 /* SUMAR max-min */
 // 30 -- crear una funcion que se le pasen como parametros dos arreglos y que devuelva la suma del menor y el mayor numero de cada array
 
@@ -98,3 +221,25 @@ sumAll([10,5]); */
 console.log(compareArr([1,2,3,55],[0,1,2,3,22])); */
 
 
+
+
+
+
+
+
+
+/*(Free Code Camp) REMOVER VALORES DE UN ARRAY */
+// 33 - Se le proporcionará una matriz inicial (el primer argumento de la destroyerfunción), seguida de uno o más argumentos. Elimina todos los elementos de la matriz inicial que tengan el mismo valor que estos argumentos.
+
+/* const removeElements = (arr,...val)=>{
+    let newArr = []
+    
+    arr.forEach(element => {
+        val.find(e=>e===element) ?false :newArr.push(element)
+    });
+
+    console.log(newArr);
+    return newArr;
+};
+
+removeElements([1, 2, 3, 5, 1, 2, 3], 2, 3); */
