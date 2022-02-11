@@ -99,7 +99,7 @@ invert("hola mundo"); */
 
 
 // 6 - Programa una función para contar el número de veces que se repite una palabra en un texto largo.
-const wordCounter = (text,search)=>{
+/* const wordCounter = (text,search)=>{
     const textArr = text.split(" ");
 
     let iterator = 0;
@@ -112,7 +112,157 @@ const wordCounter = (text,search)=>{
 
     console.log(iterator);
 };
-wordCounter("que hola tal estas hola man hola","hola");
+wordCounter("que hola tal estas hola man hola","hola"); */
+
+
+
+
+
+
+
+
+
+// 7-Programa una función que valide si una palabra o frase dada, es un palíndromo (que se lee igual en un sentido que en otro).
+/* const palindromo = (text)=>{
+    const textReverse = text.split("").reverse().join("");
+
+    console.log(textReverse === text);
+};
+palindromo("palindromo"); */
+
+
+
+
+
+
+
+
+
+// 8-Programa una función que elimine cierto patrón de caracteres de un texto dado.
+/* const removeLeters = (text,value)=>{
+    let newText = text.replace(new RegExp(value,"ig"),"");
+    console.log(newText);
+};
+removeLeters("xyz1, xyz2, xyz3 & xyz4","xyz"); */
+
+
+
+
+
+
+
+
+
+// 9-Programa una función que obtenga un numero aleatorio entre 501 y 600.
+/* const randomNumber = ()=>{
+    const number = Math.ceil(Math.random()*100) + 500
+    console.log(number);
+};
+randomNumber() */
+
+
+
+
+
+
+
+
+
+// 10-Programa una función que reciba un número y evalúe si es capicúa o no (que se lee igual en un sentido que en otro).
+/* const capicua = (number)=>{
+    const newNumber = number.toString().split("").reverse().join("");
+    console.log(parseInt(newNumber) === number);
+};
+capicua(121); */
+
+
+
+
+
+
+
+
+
+// 11-Programa una función que calcule el factorial de un número (El factorial de un entero positivo n, se define como el producto de todos los números enteros positivos desde 1 hasta n);
+/* const factorial = (number)=>{
+    let fact = 1;
+
+    for(let i=1; i<number+1; i++){
+        fact = fact * i;
+    }
+
+    console.log(fact);
+};
+factorial(5); */
+
+
+
+
+
+
+
+
+
+// 12-Programa una función que determine si un número es primo (aquel que solo es divisible por sí mismo y 1) o no;
+/* const numeroPrimo = (number)=>{
+    const sqrtNumber = Math.round(Math.sqrt(number));
+
+    for(let i=2; i<=sqrtNumber; i++){
+        if(number%i === 0){            
+            return console.log("no primo");
+        };
+    };
+    return console.log("PRIMO");
+}
+numeroPrimo(1711123); */
+
+
+
+
+
+
+
+
+
+// 13-Programa una función que determine si un número es par o impar.
+/* const verifyParNumber = (number)=>{
+    number%2 ?console.log("IMPAR") :console.log("PAR");
+};
+verifyParNumber(62); */
+
+
+
+
+
+
+
+
+
+// 14-Programa una función para convertir grados Celsius a Fahrenheit y viceversa, pe. miFuncion(0,"C") devolverá 32°F.
+/* const gradesConverter = (grades,type)=>{
+    let converted;
+
+    if(type==="c"){
+        converted = {grades:(grades * 9/5) + 32, type:"Fahrenheit"};
+    }else if(type === "f"){ 
+        converted = {grades:(grades - 32) * 5/9, type:"Celsius"}
+    };
+
+    return console.log(converted);
+}
+gradesConverter(2,"c"); */
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -243,3 +393,38 @@ console.log(compareArr([1,2,3,55],[0,1,2,3,22])); */
 };
 
 removeElements([1, 2, 3, 5, 1, 2, 3], 2, 3); */
+
+
+
+
+
+
+
+
+/*(Free Code Camp) BUSCAR EN UN OBJETO */
+// 34 - Cree una función que mire a través de una matriz de objetos (primer argumento) y devuelva una matriz de todos los objetos que tienen pares de nombre y valor coincidentes (segundo argumento). Cada par de nombre y valor del objeto de origen debe estar presente en el objeto de la colección si se va a incluir en la matriz devuelta.
+
+const objSearch = (arr,search)=>{
+
+    const SK = Object.keys(search);
+
+    arr.forEach(obj => {
+        Object.entries(obj).forEach(([key,value])=>{
+            //console.log(key);
+            SK.find(sk=>sk===key ?console.log(obj) :false)
+        });
+
+
+    });
+};
+objSearch([
+    {age:21,ocupation:"dev"},
+    {age:31,ocupation:"athlet"},
+    {ocupation:"medic"},
+    {age:20,ocupation:"lawyer"},
+    {age:21,ocupation:"cook"}],
+    
+    {age:23,ocupation:""});
+
+
+
