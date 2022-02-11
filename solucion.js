@@ -405,26 +405,32 @@ removeElements([1, 2, 3, 5, 1, 2, 3], 2, 3); */
 // 34 - Cree una función que mire a través de una matriz de objetos (primer argumento) y devuelva una matriz de todos los objetos que tienen pares de nombre y valor coincidentes (segundo argumento). Cada par de nombre y valor del objeto de origen debe estar presente en el objeto de la colección si se va a incluir en la matriz devuelta.
 
 const objSearch = (arr,search)=>{
-
     const SK = Object.keys(search);
+    const SV = Object.values(search);
+    let FinalArr = [];
+    let BD = [...arr];
 
-    arr.forEach(obj => {
-        Object.entries(obj).forEach(([key,value])=>{
-            //console.log(key);
-            SK.find(sk=>sk===key ?console.log(obj) :false)
+    for(let i=0; i<SK.length; i++){        
+        BD.forEach(obj => {
+            Object.keys(obj).find(e=>e===SK[i] ?FinalArr.push(obj) :false);            
         });
-
-
-    });
-};
-objSearch([
-    {age:21,ocupation:"dev"},
-    {age:31,ocupation:"athlet"},
-    {ocupation:"medic"},
-    {age:20,ocupation:"lawyer"},
-    {age:21,ocupation:"cook"}],
+        BD = [...FinalArr];
+        FinalArr = [];
+    }
+    //console.log(BD);
+        
+    for(let i=0; i<SV.length; i++){    
+        BD.forEach(obj => {
+            Object.values(obj).find(e=>e===SV[i] ?FinalArr.push(obj) :false);            
+        });
+        BD = [...FinalArr];
+        FinalArr = [];
+    }
+    //console.log(BD);
     
-    {age:23,ocupation:""});
+    return console.log(BD);
+};
+objSearch([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" });
 
 
 
