@@ -250,6 +250,16 @@ funcion([1, 2, 3, 5, 1, 2, 3], 2, 3)
 
 
 
+34** - Cree una función que mire a través de una matriz de objetos (primer argumento) y devuelva una matriz de todos los objetos que tienen pares de nombre y valor coincidentes (segundo argumento). Cada par de nombre y valor del objeto de origen debe estar presente en el objeto de la colección si se va a incluir en la matriz devuelta.
+function([
+  { first: "Romeo", last: "Montague" },
+  { first: "Mercutio", last: null },
+  { first: "Tybalt", last: "Capulet" }],   
+  { last: "Capulet" });
+    Debe devolver => [ { first: 'Tybalt', last: 'Capulet' } ];
+
+
+
 
 
 

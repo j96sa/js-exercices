@@ -260,8 +260,232 @@ gradesConverter(2,"c"); */
 
 
 
+// 15 - Programa una función para convertir números de base binaria a decimal y viceversa.
+/* const transformBases = (num,base)=>{
+    return base===2 
+        ?console.log(parseInt(num,2)) 
+        :console.log(num.toString(2));
+};
+transformBases(1010111,2); */
 
 
+
+
+
+
+
+
+
+// 16 - Programa una función que devuelva el monto final después de aplicar un descuento a una cantidad dada, pe. miFuncion(1000, 20) devolverá 800.
+/* const discount = (number,disc)=>{
+    return console.log(number - (number * disc) / 100);
+};
+discount(799,15); */
+
+
+
+
+
+
+
+
+
+// 17 - Programa una función que dada una fecha válida determine cuantos años han pasado hasta el día de hoy, pe. miFuncion(new Date(1984,4,23)) devolverá 35 años (en 2020).
+/* const getYears = (date)=>{
+    let final = Date.now() - date.getTime();
+    return console.log(Math.floor(final/1000/60/60/24/365));
+};
+getYears(new Date(1996,11,10)); */
+
+
+
+
+
+
+
+
+
+// 18 - Programa una función que dada una cadena de texto cuente el número de vocales y consonantes, pe. miFuncion("Hola Mundo") devuelva Vocales: 4, Consonantes: 5.
+/* const countLetters = (text)=>{
+    const vocal = (/[aeiou]/i),
+    consonant = /[bcdfghjklmnñpqrstvwxyz]/i;
+    
+    const counter = {vocals:0,consonants:0};
+
+    for(let i=0; i<text.length; i++){
+        if(vocal.test(text[i])){
+            counter.vocals = counter.vocals + 1;
+        }else if(consonant.test(text[i])){
+            counter.consonants = counter.consonants + 1;
+        }
+    };
+
+    return console.log(counter);
+};
+countLetters("hola mundo"); */
+
+
+
+
+
+
+
+
+
+// 19 - Programa una founcion que valide que un texto sea un nombre valido, pe. miFuncion("Josue Paulo")devolvera verdadero
+/* const validName = (name)=>{
+    const regExp = /^[a-z\s]+$/i;
+    return regExp.test(name) ?console.log(`${name} es un nombre valido`) :console.log(`${name} no es un nombre valido`)
+};
+validName("Asercio Zamora") */
+
+
+
+
+
+
+
+
+
+// 20 - Programa una función que valide que un texto sea un email válido, pe. miFuncion("jonmircha@gmail.com") devolverá verdadero.
+/* const validGmail = (email)=>{
+    const validMail = /^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})+$/i;
+    return validMail.test(email) ?console.log("valid") :console.log("invalid");
+};
+validGmail("asvalidgmail@gmail.com"); */
+
+
+
+
+
+
+
+
+
+// 21 - Programa una función que dado un array numérico devuelve otro array con los números elevados al cuadrado, pe. mi_funcion([1, 4, 5]) devolverá [1, 16, 25].
+/* const potenciarNumeros = (arr)=>{
+    const newArr = arr.map(e=>Math.pow(e,2));
+    return console.log(newArr);
+};
+potenciarNumeros([1,2,4,6]); */
+
+
+
+
+
+
+
+
+
+// 22 - Programa una función que dado un array devuelva el número mas alto y el más bajo de dicho array, pe. miFuncion([1, 4, 5, 99, -60]) devolverá [99, -60].
+/* const maxMin = (arr)=>{
+    const values = {max:null,min:null};
+
+    values.min = Math.min(...arr);
+    values.max = Math.max(...arr);
+
+    return console.log(values);
+};
+maxMin([22,-1,2,80,0,4]); */
+
+
+
+
+
+
+
+
+
+// 23 - Programa una función que dado un array de números devuelva un objeto con 2 arreglos en el primero almacena los números pares y en el segundo los impares, pe. miFuncion([1,2,3,4,5,6,7,8,9,0]) devolverá {pares: [2,4,6,8,0], impares: [1,3,5,7,9]}.
+/* const objNumbers = (arr)=>{
+    const obj = {pares:[],impares:[]};
+
+    arr.forEach(e => {
+        (e%2) ?obj.impares.push(e) :obj.pares.push(e)
+    });
+
+    return console.log(obj);;
+};
+objNumbers([1,2,3,4,5,6,7,8,9]); */
+
+
+
+
+
+
+
+
+
+// 24 - Programa una función que dado un arreglo de números devuelva un objeto con dos arreglos, el primero tendrá los numeros ordenados en forma ascendente y el segundo de forma descendiente, pe. miFuncion([7, 5,7,8,6]) devolverá { asc: [5,6,7,7,8], desc: [8,7,7,6,5] }.
+/* const newOrder = (arr)=>{
+    const obj = {asc:[],desc:[]};
+
+    obj.asc = arr.map(e=>e).sort((a,b)=>a - b);
+    obj.desc = arr.map(e=>e).sort((a,b)=>b - a);
+ 
+    return console.log(obj);
+}
+newOrder([4,1,6,8,3,2,7,9,0,5]); */
+
+
+
+
+
+
+
+
+
+// 25 - Programa una función que dado un arreglo de elementos, elimine los duplicados, pe. miFuncion(["x", 10, "x", 2, "10", 10, true, true]) devolverá ["x", 10, 2, "10", true].
+/* const removeDuplicates = (arr)=>{
+    const clearArr = [...new Set(arr)];
+    return console.log(clearArr);
+};
+removeDuplicates([1,3,false,"ok",true,false,1]); */
+
+
+
+
+
+
+
+
+
+// 26 - Programa una función que dado un arreglo de números obtenga el promedio, pe. promedio([9,8,7,6,5,4,3,2,1,0]) devolverá 4.5
+/* const getPromedy = (arr)=>{
+    const promedy = arr.reduce((acc,val)=>acc+val)/arr.length;
+    return console.log(promedy);
+};
+getPromedy([8.5,9,10,10,10,9.5]); */
+
+
+
+
+
+
+
+
+
+// 27 - dado un texto transforma todas sus letras a mayuscula;
+/* const transform = (text)=>{
+    return console.log(text.toUpperCase());
+};
+transform("text"); */
+
+
+
+
+
+
+
+
+
+// 29 - dado un texto transforma la primera letra de cada palabra a mayuscula;
+/* const capitalize = (text)=>{
+    let capitalized = text.split(" ");    
+    capitalized = capitalized.map(e=>e.replace(e[0],e[0].toUpperCase()));
+    return console.log(capitalized.join(" "));
+};
+capitalize("this is the text"); */
 
 
 
@@ -404,7 +628,7 @@ removeElements([1, 2, 3, 5, 1, 2, 3], 2, 3); */
 /*(Free Code Camp) BUSCAR EN UN OBJETO */
 // 34 - Cree una función que mire a través de una matriz de objetos (primer argumento) y devuelva una matriz de todos los objetos que tienen pares de nombre y valor coincidentes (segundo argumento). Cada par de nombre y valor del objeto de origen debe estar presente en el objeto de la colección si se va a incluir en la matriz devuelta.
 
-const objSearch = (arr,search)=>{
+/* const objSearch = (arr,search)=>{
     const SK = Object.keys(search);
     const SV = Object.values(search);
     let FinalArr = [];
@@ -430,7 +654,7 @@ const objSearch = (arr,search)=>{
     
     return console.log(BD);
 };
-objSearch([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" });
+objSearch([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" }); */
 
 
 
